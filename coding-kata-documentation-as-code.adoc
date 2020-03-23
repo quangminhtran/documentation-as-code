@@ -12,7 +12,7 @@ Moreover, we'll try out how to document the architecture of a software system.  
 
 .Step 1: Install Sublime Text 3
 
-We can use any text editor to typeset Asciidoc documents. For this session, we'll use the popular cross-platform text editor link:https://www.sublimetext.com/3[https://www.sublimetext.com/3[Sublime Text] to typeset Asciidoc documents.
+We can use any text editor to typeset Asciidoc documents. For this session, we'll use the popular cross-platform text editor link:https://www.sublimetext.com/3[Sublime Text] to typeset Asciidoc documents.
 
 To enable Asciidoc syntax highlighting in Sublime Text, install link:https://github.com/asciidoctor/sublimetext-asciidoc[sublimetext-asciidoc] plugin for Sublime Text.
 
@@ -106,12 +106,12 @@ Then,
 
 [source,shell]
 ----
-$ asciidoctor-pdf hello-asciidoc.adoc#
+$ asciidoctor-pdf hello-asciidoc.adoc
 $ open hello-asciidoc.pdf
 ----
 
 
-== Architectural documentation of AUTOTRAUM (Car dream)
+== Architectural documentation of AUTOTRAUM (CAR DREAM)
 
 Tom and Jerry have been working as senior consultants for Mckinsey for several years and have become close friends.  As many of their clients are in the MENA region, they travel in the region quite extensively. Unfortunately, the lack of reliable transportation infrastructure has caused them lots of frustration and headache. Very often, the taxis they ordered were canceled due to unknown reasons or didn't come on time.
 
@@ -136,7 +136,7 @@ Also, they think that it's best to use existing infrastructures as much as possi
 * Google Map should be used for showing the map and
 * AWS should be used for deploying backend services.
 
-As a software consult hired by Tom and Jerry to design AUTOTRAUM, you start with capturing the software requirements and software architecture in a software architecture documentation.
+As a software consultant hired by Tom and Jerry to design AUTOTRAUM, you start with capturing the software requirements and software architecture in a software architecture documentation.
 
 In the scope of this session, we'll focus on creating two views of the AUTOTRAUM.
 
