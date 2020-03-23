@@ -4,31 +4,29 @@ Minh Quang Tran
 
 == Goals
 
-The goal of this coding kata is to experience and appreciate the approach *documentation as code*. For this, we'll create a technical documentation in Asciidoc. From that, we'll generate various output formats such as HTML, PDF, ePub.
+The goal of this coding kata is to experience and appreciate the approach *documentation as code*. For this, we'll create technical documentation in AsciiDoc. From that, we'll generate various output formats such as HTML, PDF, and ePub.
 
-Moreover, we'll try out how to document the architecture of a system system.  For this, we'll create a draft of a software architecture documentation for a fictious software system called AUTOTRAUM (Car Dream) envisioned by Tom and Jerry - two visionary Mckinsey consultants.
+Moreover, we'll try out how to document the architecture of a software system.  For this purpose, we'll create a draft of a software architecture documentation for a fictitious software system called AUTOTRAUM (CAR DREAM) envisioned by Tom and Jerry - two visionary Mckinsey consultants.
 
 == Install tools
 
 .Step 1: Install Sublime Text 3
 
-We can use any text editor to typeset Asciidoc documents. For this session,
-we'll use use the popular cross-platform text editor Sublime Text 3 to typeset Asciidoc documents.
-Download link: link:https://www.sublimetext.com/3[https://www.sublimetext.com/3]
+We can use any text editor to typeset Asciidoc documents. For this session, we'll use the popular cross-platform text editor link:https://www.sublimetext.com/3[https://www.sublimetext.com/3[Sublime Text] to typeset Asciidoc documents.
 
 To enable Asciidoc syntax highlighting in Sublime Text, install link:https://github.com/asciidoctor/sublimetext-asciidoc[sublimetext-asciidoc] plugin for Sublime Text.
 
-Ideally, we can edit an Asciidoc document in Sublime Text and see its rendered HTML result live. This is possible with the help of link:https://packagecontrol.io/packages/OmniMarkupPreviewer[OmniMarkupPreviewer] plugin.
+Ideally, we can edit an Asciidoc document in Sublime Text and see its rendered HTML result live. Luckily, this is possible with the help of link:https://packagecontrol.io/packages/OmniMarkupPreviewer[OmniMarkupPreviewer plugin].
 
 
 .Step 2: Install AsciiDoc processor
 
-In order to process documents typeset in AsciiDoc syntax, we need an AsciiDoc processor. We can use the popular processor link:https://asciidoctor.org/docs/install-toolchain/[Asciidoctor], an implementation of the Asciidoctor processor written in Ruby. In particular, we'll use Asciidoctor command line tool.
+To process documents typeset in AsciiDoc syntax, we need an AsciiDoc processor. We can use the processor link:https://asciidoctor.org/docs/install-toolchain/[Asciidoctor], an implementation of the Asciidoctor processor written in Ruby. In particular, we'll use the Asciidoctor command-line tool.
 
-Since AsciiDoctor is written in Ruby, we need to install Ruby interpreter on our system. Although MacOS provides a Ruby intepreter, to not polute it, it's a common practice to use link:https://rvm.io/[Ruby Version Manager (RVM)] to install and manage multiple ruby environments. The advantages of  RVM are two fold:
+Since AsciiDoctor is written in Ruby, we need to install a Ruby interpreter on our system. Although MacOS provides a Ruby interpreter, it's a common practice to use link:https://rvm.io/[Ruby Version Manager (RVM)] to install and manage multiple Ruby environments. The advantages of  RVM are two-fold:
 
-* We can switch between different Ruby version
-* Since all Ruby installations are installed in the `.rvm` folder inside user's home directory, we can simply remove that folder and start over again without disturbing the operating system.
+* We can switch between different Ruby version easily and
+* Since all Ruby installations are installed in the `.rvm` folder inside the user's home directory, we can remove that folder and start over again without disturbing the operating system.
 
 To install RVM with a stable ruby:
 
@@ -45,7 +43,7 @@ $ \curl -sSL https://get.rvm.io | bash -s stable --ruby
 /Users/quang/.rvm/rubies/ruby-2.6.3/bin/ruby
 ----
 
-Then, Asciidoctor can be installed as a gem (a Ruby library) for the current version
+Then, Asciidoctor can be installed as a gem (a Ruby library) for the current version.
 
 
 [source,shell]
@@ -54,7 +52,7 @@ $ gem install asciidoctor
 /Users/quang/.rvm/gems/ruby-2.6.3/gems/asciidoctor-2.0.10/lib/asciidoctor.rb
 ----
 
-Now, `asciidoctor` is read to process a AsciiDoc document. In combination with a right backend, it's possible to convert an Asciidoc document into an HTML page, a PDF, an ePub document readable by many e-readers, etc.
+Now, `asciidoctor` is ready to process an AsciiDoc document. In combination with a right backend, it's possible to convert an Asciidoc document into, among others, an HTML page, a PDF, and an ePub document readable by many e-readers.
 
 == Basic Asciidoc syntax
 
@@ -67,10 +65,16 @@ $ asciidoctor hello-asciidoc.adoc
 $ open hello-asciidoc.html
 ----
 
+In this document, you can see many keyAsciiDoc elements:
+
+Image
+List
+Table
+Admonitions (info, warning, caution)
 
 == Syntax highlighting
 
-We can activate syntax highligh for code blocks by setting the `source-highlighter` to a code highlighter. A popular code highlighter written purely in Ruby is link:https://asciidoctor.org/docs/user-manual/#rouge[rouge].
+We can activate syntax highlight for code blocks by setting the `source-highlighter` to a code highlighter. A popular code highlighter written purely in Ruby is link:https://asciidoctor.org/docs/user-manual/#rouge[rouge].
 
 First, we need to install `rouge` gem:
 
@@ -109,9 +113,9 @@ $ open hello-asciidoc.pdf
 
 == Architectural documentation of AUTOTRAUM (Car dream)
 
-Tom and Jerry have been working as senior consultants for Mckinsey for several years and have become close friends.  As many of their clients are located in the MENA region, they travel in the region quite extensively. Unfortunately though, the lack of reliable transporation infrastructure has caused them lots of frustration and headache. Very often, the taxis they ordered were canceled due to unknown reason or didn't come on time.
+Tom and Jerry have been working as senior consultants for Mckinsey for several years and have become close friends.  As many of their clients are in the MENA region, they travel in the region quite extensively. Unfortunately, the lack of reliable transportation infrastructure has caused them lots of frustration and headache. Very often, the taxis they ordered were canceled due to unknown reasons or didn't come on time.
 
-"That's enough!" Tom cried "Let's build a real-time ride hailing software for the region". Jerry is immediately excited by the idea. After long intensive discussion, they decide to call their software -- due to their love for the German language -- AUTOTRAUM (CAR DREAM).
+"That's enough!" Tom cried, "Let's build a ride-hailing software system for the region!" Jerry is immediately excited by the idea. After many long intensive discussions, they decide to call their software -- due to their love for the German language -- AUTOTRAUM (CAR DREAM).
 
 
 Moreover, they identified first use cases that the software system should allow a user to:
@@ -119,44 +123,38 @@ Moreover, they identified first use cases that the software system should allow 
 - Book a ride.
 - Cancel a ride
 
-Similarly, a driver (called a captain) is able to:
+Additionally, a driver (called a captain) should be able to:
 
 - Accept a ride
 - Cancel a ride
 
 
-In the first phase, AUTOTRAUM will provide an iOS app called IOS-AUTO-TRAUM for users and ANDROID-AUTO-TRAUM for captains. The mobile apps will communicate with a RESTful backend that's developed based on microservice principal.
+In the first phase, AUTOTRAUM should provide an iOS app called IOS-AUTO-TRAUM for users and ANDROID-AUTO-TRAUM for captains. The mobile apps should communicate with a RESTful backend that's developed based on microservice principal.
 
 Also, they think that it's best to use existing infrastructures as much as possible. As a result, they decide that:
 
-* Google Map will be used for showing the map and
-* AWS will be used for deploying backend services.
+* Google Map should be used for showing the map and
+* AWS should be used for deploying backend services.
 
-As a software consult hired by Tom and Jerry to design AUTOTRAUM, you start with capturing the software requirements and software architecture in a software architecture.
+As a software consult hired by Tom and Jerry to design AUTOTRAUM, you start with capturing the software requirements and software architecture in a software architecture documentation.
 
-In the scope of this session, we'll create two views of the system
+In the scope of this session, we'll focus on creating two views of the AUTOTRAUM.
 
 .Business context
 
-The business context depicts
+The business context depicts:
 
 * Actors: who are going to use the systems
-* System to be developed, that is AUTOTRAUM
+* AUTOTRAUM as a blackbox
 * External systems that AUTOTRAUM depends on or interacts with
 
 
 .Technical context
 
-The technical context depicts
+The technical context depicts:
 
-* How AUTOTRAUM is deployed on hardware infrastructure and
-* which interface (HTTP, command line interface, process) AUTOTRAUM uses to communicate with external systems.
-
+* How AUTOTRAUM should be deployed on hardware infrastructure and
+* which interface (HTTP, command-line interface, process) AUTOTRAUM uses to communicate with external systems.
 
 We can use UML diagrams for creating these diagrams, for instance, with link:https://app.diagrams.net/[draw.io]
-
-
-
-
-
 
