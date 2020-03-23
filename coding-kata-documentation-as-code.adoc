@@ -129,7 +129,7 @@ Additionally, a driver (called a captain) should be able to:
 - Cancel a ride
 
 
-In the first phase, AUTOTRAUM should provide an iOS app called IOS-AUTO-TRAUM for users and ANDROID-AUTO-TRAUM for captains. The mobile apps should communicate with a RESTful backend that's developed based on microservice principal.
+In the first phase, AUTOTRAUM should provide an iOS app called iAUTOTRAUMUSER for users and iAUTOTRAUMCAPTAIN for captains. The mobile apps should communicate with a RESTful backend that's developed based on microservice principal.
 
 Also, they think that it's best to use existing infrastructures as much as possible. As a result, they decide that:
 
@@ -140,7 +140,7 @@ As a software consultant hired by Tom and Jerry to design AUTOTRAUM, you start w
 
 In the scope of this session, we'll focus on creating two views of the AUTOTRAUM.
 
-.Business context
+=== Business context
 
 The business context depicts:
 
@@ -149,7 +149,7 @@ The business context depicts:
 * External systems that AUTOTRAUM depends on or interacts with
 
 
-.Technical context
+=== Technical context
 
 The technical context depicts:
 
